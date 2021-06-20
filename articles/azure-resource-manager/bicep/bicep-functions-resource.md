@@ -378,7 +378,7 @@ storageAccountSettings: {
 The next example shows a list function that takes a parameter. In this case, the function is **listAccountSas**. Pass an object for the expiry time. The expiry time must be in the future.
 
 ```bicep
-param accountSasProperties object {
+param accountSasProperties object = {
   default: {
     signedServices: 'b'
     signedPermission: 'r'
